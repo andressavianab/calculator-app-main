@@ -1,4 +1,4 @@
-# 🧮 [Calc,a simple calculator ](https://andressavianab.github.io/calculator-app-main/)# Frontend Mentor - Calculator app solution
+# 🧮 [Calc,a simple calculator ](https://andressavianab.github.io/calculator-app-main/)
 
 This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
