@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  width: 100%;
+  height: 100vh;
+  font-size: 32px;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.3s;
+}
+
+body[data-theme="t-one"] {
+  --main-bg: hsl(222, 26%, 31%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --calc-bg: hsl(223, 31%, 20%);
+  --text-color: hsl(0, 0%, 100%);
+  --key-bg: hsl(0, 0%, 100%);
+  --text-del-color: hsl(0, 0%, 100%);
+  --key-text-color: hsl(221, 14%, 31%);
+  --key-bg-del: hsl(225, 21%, 49%);
+  --key-bg-equal: hsl(6, 63%, 50%);
+  --key-equal-shadow: hsl(6, 62%, 37%);
+  --key-shadow: hsl(0, 0%, 73%);
+  --key-del-shadow: hsl(224, 21%, 36%);
+  --key-color-equal-text: hsl(0, 0%, 100%);
+  --rigth: 19px;
+}
+
+body[data-theme="t-two"] {
+  --main-bg: hsl(0, 0%, 90%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --calc-bg: hsl(0, 5%, 81%);
+  --text-color: hsl(60, 10%, 19%);
+  --text-del-color: hsl(0, 0%, 100%);
+  --key-bg-del: hsl(185, 42%, 37%);
+  --key-bg: hsl(45, 7%, 89%);
+  --key-bg-equal: hsl(25, 98%, 40%);
+  --key-equal-shadow: hsl(25, 99%, 27%);
+  --key-del-shadow: hsl(185, 58%, 25%);
+  --key-shadow: hsl(35, 11%, 61%);
+  --key-color-equal-text: hsl(0, 0%, 100%);
+  --rigth: 0px;
+}
+
+body[data-theme="t-three"] {
+  --main-bg: hsl(268, 75%, 9%);
+  --screen-bg: hsl(268, 71%, 12%);
+  --calc-bg: hsl(268, 71%, 12%);
+  --text-color: hsl(52, 100%, 62%);
+  --text-del-color: hsl(0, 0%, 100%);
+  --key-bg-del: hsl(268, 47%, 21%);
+  --key-bg: hsl(281, 89%, 26%);
+  --key-bg-equal: hsl(176, 100%, 44%);
+  --key-equal-shadow: hsl(177, 92%, 70%);
+  --key-del-shadow: hsl(290, 70%, 36%);
+  --key-shadow: hsl(285, 91%, 52%);
+  --key-color-equal-text: hsl(268, 71%, 12%);
+  --rigth: -19px;
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  background-color: var(--screen-bg);
+  width: 100%;
+  height: 22%;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--text-color);
+  padding-right: 15px;
+  text-align: right;
+  border: none;
+  border-radius: 10px;
+}
+
+button {
+  font-family: "League Spartan", sans-serif;
+  cursor: pointer;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 90%;
+  width: 30%;
+  border: none;
+}
+
+button.switch-theme-js {
+  width: 60px;
+  height: 20px;
+  background-color: var(--screen-bg);
+}
+
+.theme {
+  display: flex;
+  font-size: 10px;
+  align-items: center;
+  border: solid 1px equal;
+  gap: 20px;
+}
+
+.theme.section {
+  border: solid 1px equal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  height: 13px;
+  width: 13px;
+  border-radius: 7px;
+  background-color: var(--key-bg-equal);
+  position: relative;
+  right: var(--rigth);
+  transition-duration: 0.3s;
+}
+
+.theme-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.calc {
+  background-color: var(--calc-bg);
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calc-row {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.calc-number {
+  background-color: var(--key-bg);
+  color: var(--key-text-color);
+  border-bottom: 3px solid var(--key-shadow);
+}
+
+.calc-del-reset {
+  background-color: var(--key-bg-del);
+  color: var(--text-del-color);
+  border-bottom: 3px solid var(--key-del-shadow);
+}
+
+.calc-del-reset:nth-child(1) {
+  width: 50%;
+}
+
+.calc-equal {
+  width: 50%;
+  background-color: var(--key-bg-equal);
+  color: var(--key-color-equal-text);
+  border-bottom: 3px solid var(--key-equal-shadow);
+}
+
+@media (max-width: 758px) {
+  .container {
+    width: 300px;
+    height: 400px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}

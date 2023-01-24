@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator app</title>
+
+</head>
+<body id="body" data-theme="t-one">
+  <div class="container">
+    <div class="header">
+    <section class="tittle">
+      <p>calc</p>
+    </section>
+    <section class="theme">
+      <div>
+        <p>THEME</p>
+      </div>
+      <div class="theme-section">
+        <div class="theme-numbers">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+        </div>
+        <button id="switchtheme" type="button" class="switch-theme-js">
+          <div class="ball" id="ball">
+          </div>
+        </button>
+      </div>
+    </section>
+  </div>
+      <input id="resultado" type="text" disabled="disabled class="screen-value" value="">
+      </input>
+    <div id="calc" class="calc">
+      <section class="calc-row">
+        <button onclick="calcular('valor', 7)" class="calc-number">
+          7
+        </button>
+        <button onclick="calcular('valor', 8)" class="calc-number">
+          8
+        </button>
+        <button onclick="calcular('valor', 9)" class="calc-number">
+          9
+        </button>
+        <button onclick="calcular('acao', 'del')" class="calc-del-reset">
+          DEL
+        </button>
+      </section>
+      <section class="calc-row">
+        <button onclick="calcular('valor', 4)" class="calc-number">
+          4
+        </button>
+        <button onclick="calcular('valor', 5)" class="calc-number">
+          5
+        </button>
+        <button onclick="calcular('valor', 6)" class="calc-number">
+          6
+        </button>
+        <button onclick="calcular('acao', '+')" class="calc-number">
+          +
+        </button>
+      </section>
+      <section class="calc-row">
+        <button onclick="calcular('valor', 1)" class="calc-number">
+          1
+        </button>
+        <button onclick="calcular('valor', 2)" class="calc-number">
+          2
+        </button>
+        <button onclick="calcular('valor', 3)" class="calc-number">
+          3
+        </button>
+        <button onclick="calcular('acao', '-')" class="calc-number">
+          -
+        </button>
+      </section>
+      <section class="calc-row">
+        <button onclick="calcular('acao', '.')" class="calc-number">
+          .
+        </button>
+        <button onclick="calcular('valor', 0)" class="calc-number">
+          0
+        </button>
+        <button onclick="calcular('acao', '/')" class="calc-number">
+          /
+        </button>
+        <button onclick="calcular('acao', '*')" class="calc-number">
+          x
+        </button>
+      </section>
+      <section class="calc-row">
+        <button onclick="calcular('acao', 'reset')" class="calc-del-reset">
+          RESET
+        </button>
+        <button onclick="calcular('acao', '=')" class="calc-equal">
+          =
+        </button>
+      </section>
+    </div>
+  </div>
+ <!---<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>--> 
+  <script src="./script.js"></script>
+</body>
+</html>
